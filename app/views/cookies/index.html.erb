@@ -1,0 +1,37 @@
+<h1>Listing cookies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Eggs</th>
+      <th>Flour</th>
+      <th>Sugar</th>
+      <th>Oil</th>
+      <th>Comments</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cookies.each do |cooky| %>
+      <tr>
+        <td><%= cooky.name %></td>
+        <td><%= cooky.eggs %></td>
+        <td><%= cooky.flour %></td>
+        <td><%= cooky.sugar %></td>
+        <td><%= cooky.oil %></td>
+        <td><%= cooky.comments %></td>
+        <td><%= link_to 'Show', cooky %></td>
+        <td><%= link_to 'Edit', edit_cookie_path(cooky) %></td>
+        <td><%= link_to 'Destroy', cooky, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cookie', new_cookie_path %>

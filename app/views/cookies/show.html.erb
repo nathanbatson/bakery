@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @cooky.name %>
+</p>
+
+<p>
+  <strong>Eggs:</strong>
+  <%= @cooky.eggs %>
+</p>
+
+<p>
+  <strong>Flour:</strong>
+  <%= @cooky.flour %>
+</p>
+
+<p>
+  <strong>Sugar:</strong>
+  <%= @cooky.sugar %>
+</p>
+
+<p>
+  <strong>Oil:</strong>
+  <%= @cooky.oil %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @cooky.comments %>
+</p>
+
+<%= link_to 'Edit', edit_cookie_path(@cooky) %> |
+<%= link_to 'Back', cookies_path %>

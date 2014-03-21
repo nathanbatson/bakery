@@ -1,0 +1,39 @@
+<h1>Listing cakes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Eggs</th>
+      <th>Flour</th>
+      <th>Sugar</th>
+      <th>Oil</th>
+      <th>Comments</th>
+      <th>Recipe Sentecne</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cakes.each do |cake| %>
+      <tr>
+        <td><%= cake.name %></td>
+        <td><%= cake.eggs %></td>
+        <td><%= cake.flour %></td>
+        <td><%= cake.sugar %></td>
+        <td><%= cake.oil %></td>
+        <td><%= cake.comments %></td>
+        <td><%= cake.recipe_sentence %></td>
+        <td><%= link_to 'Show', cake %></td>
+        <td><%= link_to 'Edit', edit_cake_path(cake) %></td>
+        <td><%= link_to 'Destroy', cake, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cake', new_cake_path %>
